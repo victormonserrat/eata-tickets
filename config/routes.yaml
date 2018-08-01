@@ -1,0 +1,3 @@
+#index:
+#    path: /
+#    controller: EataDevTest\Infrastructure\Controller\DefaultController::index

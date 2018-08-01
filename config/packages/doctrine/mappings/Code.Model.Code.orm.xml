@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping">
+    <entity name="EataDevTest\Domain\Code\Model\Code" table="code">
+        <id name="id" column="id" type="code_id" />
+        <field name="orderId" column="order_id" type="code_order_id" />
+        <field name="orderLineId" column="order_line_id" type="code_order_line_id" />
+        <field name="ticketId" column="ticket_id" type="code_ticket_id" />
+        <field name="validationDate" column="validation_date" type="code_validation_date" nullable="true" />
+    </entity>
+</doctrine-mapping>

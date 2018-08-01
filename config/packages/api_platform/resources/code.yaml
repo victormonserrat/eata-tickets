@@ -1,0 +1,36 @@
+EataDevTest\Domain\Code\Model\Code:
+    collectionOperations:
+        put:
+            method: 'PUT'
+            path: '/codes/{id}/validate.{_format}'
+            controller: 'EataDevTest\Infrastructure\Controller\ValidateCode'
+            swagger_context:
+                summary: 'Validates a Code resource.'
+                parameters:
+                -   in: 'path'
+                    name: 'id'
+                    required: true
+                    type: 'string'
+                responses:
+                    200:
+                        description: 'Code resource validated'
+                        schema:
+                            type: 'object'
+                            title: 'Code'
+                            properties:
+                                id:
+                                    type: 'string'
+                                orderId:
+                                    type: 'string'
+                                orderLineId:
+                                    type: 'string'
+                                ticketId:
+                                    type: 'string'
+                                validationDate:
+                                    type: 'string'
+                                    format: 'date-time'
+                    403:
+                        description: 'Resource not validated'
+                    404:
+                        description: 'Resource not found'
+    itemOperations: []

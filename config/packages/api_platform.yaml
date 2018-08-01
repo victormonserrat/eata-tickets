@@ -1,0 +1,21 @@
+api_platform:
+    mapping:
+        paths: ['%kernel.project_dir%/config/packages/api_platform/resources']
+    formats:
+        json: ['application/json']
+        html: ['text/html']
+    exception_to_status:
+        EataDevTest\Application\Exception\NotFoundCode: 404
+        EataDevTest\Application\Exception\NotFoundEvent: 404
+        EataDevTest\Application\Exception\NotFoundTicket: 404
+        EataDevTest\Application\Exception\NotValidatedCode: 403
+        EataDevTest\Domain\Order\Exception\InvalidOrder: 400
+        EataDevTest\Domain\Order\Exception\InvalidOrderLine: 400
+        EataDevTest\Domain\Order\Exception\InvalidOrderLineQuantity: 400
+        EataDevTest\Domain\Order\Exception\InvalidOrderLineTicketId: 400
+        EataDevTest\Domain\Order\Exception\InvalidOrderPurchaser: 400
+        EataDevTest\Domain\Order\Exception\InvalidOrderPurchaserDocumentId: 400
+        EataDevTest\Domain\Order\Exception\InvalidOrderPurchaserEmail: 400
+        EataDevTest\Domain\Order\Exception\InvalidOrderPurchaserLastName: 400
+        EataDevTest\Domain\Order\Exception\InvalidOrderPurchaserName: 400
+        EataDevTest\Domain\Order\Exception\InvalidOrderPurchaserZipCode: 400

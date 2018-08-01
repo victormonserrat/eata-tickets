@@ -1,0 +1,15 @@
+header:before {
+  background-color:#ffffff;
+}
+
+header #logo img {
+  background-color:#ffffff;
+}
+
+.information-container {
+  display:none;
+}
+
+.models {
+  display:none !important;
+}

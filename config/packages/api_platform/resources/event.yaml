@@ -1,0 +1,57 @@
+EataDevTest\Domain\Event\Model\Event:
+    attributes:
+        pagination_enabled: false
+    collectionOperations:
+        get:
+            method: 'GET'
+            path: '/events.{_format}'
+            controller: 'EataDevTest\Infrastructure\Controller\GetEvents'
+            swagger_context:
+                responses:
+                    200:
+                        description: 'Event collection response'
+                        schema:
+                            type: 'array'
+                            items:
+                                type: 'object'
+                                title: 'Event'
+                                properties:
+                                    id:
+                                        type: 'string'
+                                    name:
+                                        type: 'string'
+                                    date:
+                                        type: 'string'
+                                        format: 'date-time'
+        get_tickets:
+            method: 'GET'
+            path: '/events/{id}/tickets.{_format}'
+            controller: 'EataDevTest\Infrastructure\Controller\GetEventTickets'
+            swagger_context:
+                summary: 'Retrieves the collection of Event tickets resources.'
+                parameters:
+                    -
+                        in: 'path'
+                        name: 'id'
+                        required: true
+                        type: 'string'
+                responses:
+                    200:
+                        description: 'Event tickets collection response'
+                        schema:
+                            type: 'array'
+                            items:
+                                type: 'object'
+                                title: 'Ticket'
+                                properties:
+                                    id:
+                                        type: 'string'
+                                    name:
+                                        type: 'string'
+                                    description:
+                                        type: 'string'
+                                    price:
+                                        type: 'integer'
+                    404:
+                        description: 'Resource not found'
+    itemOperations: []
